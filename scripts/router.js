@@ -1,6 +1,7 @@
 angular.module('jui').config(function($httpProvider, $routeProvider, $locationProvider){
 	// console.log($httpProvider);
 	console.log($routeProvider);
+	$locationProvider.html5Mode(true);
 	$routeProvider
 	
 	.when('/Table', {
@@ -12,8 +13,8 @@ angular.module('jui').config(function($httpProvider, $routeProvider, $locationPr
         'controller': 'BubbleCtrl'
 	})
 	//去除＃
-	// $locationProvider.html5Mode(true);
+	
 	//去除叹号
-	$locationProvider.hashPrefix("");
+	//$locationProvider.hashPrefix("");
 	
 })
