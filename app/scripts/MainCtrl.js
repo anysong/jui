@@ -1,14 +1,15 @@
 angular.module('jui').controller('MainCtrl', ['$scope', 
 function($scope){	
+	alert('main');
 	var initParams = function(){
 		$scope.menuList = [{
 			'name': 'Table',
-			'href': '#/Table',
+			'href': 'jui.table',
 			'id': 1
 
 		},{
 			'name': 'Bubble',
-			'href': '#/Bubble',
+			'href': 'jui.bubble',
 			'id': 2
 
 		}];

@@ -1,0 +1,16 @@
+<div class="jui-menu">
+	<ul class="menu-list">
+		<li class="list-li" 
+			ng-repeat="item in menuList"
+			ng-click="toggle(item)"
+			title="{{item.href}}"
+			ng-class="{'active': item.id == activeId}">
+			<a ui-sref="{{item.href}}" ng-bind="item.name"></a>
+		</li>
+	</ul>
+</div>
+<div class="jui-main">
+	<div class="jui-main-body rr" ui-view="body">
+		
+	</div>
+</div>
