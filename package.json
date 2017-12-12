@@ -18,7 +18,12 @@
   },
   "homepage": "https://github.com/anysong/jui#readme",
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-less": "^3.3.2",
+    "gulp-notify": "^3.0.0",
+    "gulp-watch": "^4.3.11",
+    "requiredir": "^1.0.7"
   },
   "dependencies": {
     "angular": "^1.6.7",
