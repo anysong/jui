@@ -1,7 +1,7 @@
 angular.module('jui').config(function($locationProvider, $stateProvider, $urlRouterProvider){
 
 	$locationProvider.html5Mode(true);
-	$urlRouterProvider.otherwise('/main');
+	$urlRouterProvider.otherwise('/main/Table');
 
 	$stateProvider
 	.state('main', {

@@ -1,22 +1,22 @@
-angular.module('jui').controller('MainCtrl', ['$scope',
-function($scope){
-	alert('main');
+angular.module('jui').controller('MainCtrl', ['$scope','$state',
+function($scope, $state){
+	console.log($state.current.name);
 	var initParams = function(){
 		$scope.menuList = [{
-			'name': 'Table',
+			'title': 'Table',
 			'href': 'main.table',
 			'id': 1
 
 		},{
-			'name': 'Bubble',
+			'title': 'Bubble',
 			'href': 'main.bubble',
 			'id': 2
 
 		}];
-		$scope.activeId = 1;
+		$scope.activeId = $state.current.name;
 	};
 	var toggle = function(item){
-		$scope.activeId = item.id
+		$scope.activeId = item.href;
 	};
 	var initFunc = function(){
 		$scope.toggle = toggle;
