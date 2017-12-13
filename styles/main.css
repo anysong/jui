@@ -1,8 +1,70 @@
-.main {
-  background: red;
+html,
+body {
   width: 100%;
+  height: 100%;
+  margin: 0;
 }
-.main .sss {
-  width: 20px;
-  height: 303px;
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.jui {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.jui .jui-menu {
+  width: 200px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-right: 1px solid #f2f4f5;
+}
+.jui .jui-menu .menu-list {
+  padding: 20px 0;
+  margin: 0;
+}
+.jui .jui-menu .menu-list .list-li {
+  width: 100%;
+  height: 32px;
+  line-height: 32px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+.jui .jui-menu .menu-list .list-li:hover {
+  background: #f2f4f5;
+}
+.jui .jui-menu .menu-list .list-li.active {
+  background: #f2f4f5;
+}
+.jui .jui-menu .menu-list .list-li a {
+  font-size: 14px;
+  font-weight: bold;
+  color: #314659;
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding-left: 20px;
+}
+.jui .jui-main {
+  width: 100%;
+  height: 100%;
+  padding-left: 200px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.jui .jui-main .jui-main-body {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }

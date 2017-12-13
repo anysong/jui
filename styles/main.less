@@ -1,8 +1,65 @@
-.main {
-	background: red;
+html,body {
 	width: 100%;
-	.sss {
-		width: 20px;
-		height: 303px;
+	height: 100%;
+	margin: 0;
+}
+ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+
+.jui {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	.jui-menu {
+		width: 200px;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		border-right: 1px solid #f2f4f5;
+		.menu-list {
+			padding: 20px 0;
+			margin: 0;
+			.list-li {
+				width: 100%;
+				height: 32px;
+				line-height: 32px;
+				box-sizing: border-box;
+				transition: all .5s;
+				&:hover {
+					background: #f2f4f5;
+				};
+				&.active {
+					background: #f2f4f5;
+				}
+				a {
+					font-size: 14px;
+					font-weight: bold;
+					color: #314659;
+					width: 100%;
+					height: 100%;
+					display: block;
+					padding-left: 20px;
+				}
+			}
+		}
+	}
+	.jui-main {
+		width: 100%;
+		height: 100%;
+		padding-left: 200px;
+		box-sizing: border-box;
+		.jui-main-body {
+			width: 100%;
+			height: 100%;
+			padding: 20px;
+			box-sizing: border-box;
+		}
 	}
 }
