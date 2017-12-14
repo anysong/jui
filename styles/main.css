@@ -94,3 +94,29 @@ table {
   font-size: 14px;
   line-height: 20px;
 }
+.jui .jui-main .jui-main-body .jui-layout .jui-code-box {
+  border: 1px solid #ebedf0;
+  border-radius: 2px;
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  margin: 0 0 16px;
+  -webkit-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s;
+}
+.jui .jui-main .jui-main-body .jui-layout .jui-code-box .code-box-demo {
+  border-bottom: 1px solid #ebedf0;
+  padding: 42px 24px 50px;
+  color: rgba(0, 0, 0, 0.65);
+}
+.jui .jui-main .jui-main-body .jui-layout .jui-code-box .code-box-meta {
+  position: relative;
+  padding: 18px 32px;
+  border-radius: 0 0 2px 2px;
+  -webkit-transition: background-color 0.4s;
+  -o-transition: background-color 0.4s;
+  transition: background-color 0.4s;
+  width: 100%;
+  font-size: 14px;
+}
