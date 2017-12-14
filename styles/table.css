@@ -23,6 +23,7 @@
 }
 .jui-table thead tr th.sort::after {
   content: '';
+  margin-left: 2px;
   width: 7px;
   height: 9px;
   display: inline-block;
