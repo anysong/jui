@@ -26,7 +26,7 @@ a {
   border-right: 1px solid #f2f4f5;
 }
 .jui .jui-menu .menu-list {
-  padding: 20px 0;
+  padding: 40px 0;
   margin: 0;
 }
 .jui .jui-menu .menu-list .list-li {
@@ -53,6 +53,8 @@ a {
   height: 100%;
   display: block;
   padding-left: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .jui .jui-main {
   width: 100%;
@@ -67,4 +69,11 @@ a {
   padding: 20px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+.jui .jui-main .jui-main-body .jui-layout .jui-layout-title {
+  color: #0d1a26;
+  font-weight: 500;
+  margin: 8px 0 20px 0;
+  font-size: 30px;
+  line-height: 38px;
 }

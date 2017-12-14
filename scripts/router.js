@@ -17,7 +17,7 @@ angular.module('jui').config(function($locationProvider, $stateProvider, $urlRou
 		'url': '/Table',
 		'views': {
 			'body': {
-				'templateUrl': 'views/a.html',
+				'templateUrl': 'views/table.html',
 				'controller': 'TableCtrl'
 			}
 		}
