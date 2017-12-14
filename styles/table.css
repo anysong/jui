@@ -1,0 +1,72 @@
+.jui-table {
+  width: 100%;
+}
+.jui-table thead {
+  width: 100%;
+  background-color: #F4f6FA;
+}
+.jui-table thead tr {
+  line-height: 50px;
+}
+.jui-table thead tr th {
+  font-size: 14px;
+  font-weight: bold;
+  padding-left: 10px;
+  color: #3D4966;
+  text-align: left;
+}
+.jui-table thead tr th:last-child {
+  padding-right: 20px;
+}
+.jui-table thead tr th:first-child {
+  padding-left: 20px;
+}
+.jui-table thead tr th.sort::after {
+  content: '';
+  width: 7px;
+  height: 9px;
+  display: inline-block;
+  background: url("../images/icon-s");
+  background-position: -96px -104px;
+}
+.jui-table thead tr th.sort.desc::after {
+  cursor: pointer;
+  content: '';
+  margin-left: 2px;
+  width: 7px;
+  height: 9px;
+  display: inline-block;
+  background: url("../images/sprite.png");
+  background-position: -96px -84px;
+}
+.jui-table thead tr th.sort.asc::after {
+  cursor: pointer;
+  content: '';
+  margin-left: 2px;
+  width: 7px;
+  height: 9px;
+  display: inline-block;
+  background: url("../images/sprite.png");
+  background-position: -96px -64px;
+}
+.jui-table tbody {
+  width: 100%;
+}
+.jui-table tbody tr {
+  line-height: 50px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #EBEBEB;
+}
+.jui-table tbody tr td {
+  font-size: 14px;
+  font-weight: normal;
+  padding-left: 10px;
+  color: #3D4966;
+  text-align: left;
+}
+.jui-table tbody tr td:last-child {
+  padding-right: 10px;
+}
+.jui-table tbody tr td:first-child {
+  padding-left: 20px;
+}

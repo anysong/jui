@@ -1,0 +1,78 @@
+.jui-table {
+	width: 100%;
+	thead {
+	  width: 100%;
+	  background-color: #F4f6FA;
+	  tr {
+	    line-height: 50px;
+	    th {
+	      font-size: 14px;
+          font-weight: bold;
+          padding-left: 10px;
+          color: #3D4966;
+          text-align: left;
+          &:last-child {
+            padding-right: 20px;
+          }
+          &:first-child {
+            padding-left: 20px;
+          }
+          &.sort {
+          	&::after {
+          	  content: '';
+          	  width: 7px;
+          	  height: 9px;
+          	  display: inline-block;
+          	  background: url("../images/icon-s");
+          	  background-position: -96px -104px;
+          	}
+          	&.desc {
+              &::after {
+                cursor: pointer;
+                content: '';
+                margin-left:2px;
+                width: 7px;
+                height: 9px;
+                display: inline-block;
+                background: url("../images/sprite.png");
+                background-position: -96px -84px;
+              }
+            }
+            &.asc {
+              &::after {
+                cursor: pointer;
+                content: '';
+                margin-left: 2px;
+                width: 7px;
+                height: 9px;
+                display: inline-block;
+                background: url("../images/sprite.png");
+                background-position: -96px -64px;
+              }
+            }
+          }
+	    }
+	  }
+	}
+	tbody {
+	  width: 100%;
+	  tr {
+	    line-height: 50px;
+	    background-color: #ffffff;
+	    border-bottom: 1px solid #EBEBEB;
+	    td {
+	      font-size: 14px;
+          font-weight: normal;
+          padding-left: 10px;
+          color: #3D4966;
+          text-align: left;
+          &:last-child {
+              padding-right: 10px;
+          }
+          &:first-child {
+              padding-left: 20px;
+          }
+	    }
+	  }
+	}
+}

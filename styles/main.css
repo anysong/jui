@@ -12,6 +12,11 @@ ul {
 a {
   text-decoration: none;
 }
+table {
+  /*border-collapse: collapse;*/
+  /*border-spacing: 0;*/
+  empty-cells: hide;
+}
 .jui {
   width: 100%;
   height: 100%;
@@ -73,7 +78,19 @@ a {
 .jui .jui-main .jui-main-body .jui-layout .jui-layout-title {
   color: #0d1a26;
   font-weight: 500;
-  margin: 8px 0 20px 0;
+  margin: 8px 0 10px 0;
   font-size: 30px;
   line-height: 38px;
+}
+.jui .jui-main .jui-main-body .jui-layout .jui-layout-title-second {
+  color: #0d1a26;
+  font-weight: 500;
+  margin: 8px 0 10px 0;
+  font-size: 24px;
+  line-height: 32px;
+}
+.jui .jui-main .jui-main-body .jui-layout .jui-layout-remark {
+  color: #0d1a26;
+  font-size: 14px;
+  line-height: 20px;
 }
