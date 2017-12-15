@@ -30,7 +30,7 @@
 			</table>
 		</div>
 		<div class="code-box-meta">
-			table
+			default table
 		</div>
 	</div>
 	<div class="jui-code-box">
@@ -58,7 +58,151 @@
 			</table>
 		</div>
 		<div class="code-box-meta">
-			sort asc desc
+			className: 'sort','asc','desc'
+		</div>
+	</div>
+	<div class="jui-code-box">
+		<div class="code-box-demo">
+			<div class="zc-j-fixed">
+                    <div class="zc-j-fixed-scroll">
+                        <div class="zc-j-fixed-main">
+                            <div class="zc-j-fixed-main-header zc-j-scrollbar" ng-class="{'no-data': (workList.length == 0)}">
+                                <table class="zc-j-fixed-main-table zc-j-table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th class="td4">状态</th>
+                                            <th class="td5">分类</th>
+                                            <th class="td5">处理时效</th>
+                                            <th class="td6">创建人</th>
+                                            <th class="td7">受理客服组</th>
+                                            <th class="td8">受理客服</th>
+                                            <th class="td-fiexd">操作</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                            <div class="zc-j-fixed-main-body zc-j-fixed-inner zc-j-scrollbar" ng-class="{'noData': (workList.length == 0)}">
+                                <table class="zc-j-fixed-main-table zc-j-table-hover">
+                                    <thead class="zc-j-fixed-main-table-thead-no" ng-class="{'zc-j-fixed-main-table-thead': (workList.length == 0)}">
+                                        <tr>
+                                            <th class="td0" ng-show="activeTypeID != '314'">
+                                                <span ng-show="workList.length !== 0" class="zc-j-checkbox" ng-class="{'checked': isAllChecked}" ng-click="allChecked(workList)"></span>
+                                            </th>
+                                            <th class="td1">编号</th>
+                                            <th class="td2">标题</th>
+                                            <th class="zc-sort td3" ng-class="{'asc': (sortSeq == 'asc' && sortCol == 'ticketLevel'),
+                                                       'desc': (sortSeq == 'desc' && sortCol == 'ticketLevel')}" title="点击后按优先级排序"
+                                                ng-click="changeTicketLevelSort()" style="cursor: pointer">
+                                                优先级
+                                            </th>
+                                            <th class="td4">状态</th>
+                                            <th class="td5">分类</th>
+                                            <th class="td5">处理时效</th>
+                                            <th class="td6">创建人</th>
+                                            <th class="td7">受理客服组</th>
+                                            <th class="td8">受理客服</th>
+                                            <th class="zc-sort td9" ng-class="{'asc': (sortSeq == 'asc' && sortCol == 'createTime'),
+                                                       'desc': (sortSeq == 'desc' && sortCol == 'createTime')}" title="点击后按创建时间排序"
+                                                ng-click="changeCreateTimeSort()" style="cursor: pointer">
+                                                创建时间
+                                            </th>
+                                            <th class="zc-sort td10" ng-class="{'asc': (sortSeq == 'asc' && sortCol == 'updateTime'),
+                                                       'desc': (sortSeq == 'desc' && sortCol == 'updateTime')}" title="点击后按更新时间排序"
+                                                ng-click="changeUpdateTimeSort()" style="cursor: pointer">
+                                                更新时间
+                                            </th>
+                                            <th class="td-fiexd">操作</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat="item in workList" ng-class="{'active': hoverId == item.ticketId}" ng-mouseenter="addHoverStyle(item)" ng-mouseleave="removeHoverStyle(item)">
+                                            <td class="td0" ng-show="activeTypeID != '314'">
+                                                <span class="zc-j-checkbox" ng-class="{'checked': isSingleChecked[item.ticketId]}" ng-click="singleChecked(workList,item)"></span>
+                                            </td>
+                                            <td class="td1" ng-click="viewWorkOrderDetail(item)" title="{{item.ticketCode}}" ng-bind="item.ticketCode">编号</td>
+                                            <td class="td2">
+                                                <span class="workOrderClass-table-tips" ng-mouseover="getQuerySimpleTicketInfo(item.ticketId, $index, $event)">
+
+                                                    <span class='reminder_icon' ng-if='item.isReminder && item.ticketStatus != 98 && item.ticketStatus != 99'>催</span>
+
+                                                    <span style="cursor:pointer;" class="workOrderClass-table-ticketTitle" ng-class="{true:'reminder_tr_span'}[item.isReminder == 1]" ng-click="viewWorkOrderDetail(item)" ng-bind="item.ticketTitle"></span>
+                                                    <div class="tips_detail" ng-class="{'up_direction': $index == -100}">
+                                                    <div class="tips_detail_wrap zc-j-scrollbar">
+                                                        <div class="tips_detail_title zc-j-font-h2" ng-bind="querySimpleTicketInfo.ticketTitle"></div>
+                                                        <div class="tips_detail_content">
+                                                            <span class="tips_detail_content_title" style="color: #F9676F;">问题描述：</span>
+                                                            <p class="tips_detail_content_describe" ng-bind-html="querySimpleTicketInfo.ticketContent"></p>
+                                                        </div>
+                                                        <div class="tips_detail_content">
+                                                            <span class="tips_detail_content_title">最新回复：</span>
+                                                            <p class="tips_detail_content_reply" ng-bind-html="querySimpleTicketInfo.replyContent"></p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tri"></div>
+                                                </div>
+                                                </span>
+                                            </td>
+                                            <td class="td3" ng-click="viewWorkOrderDetail(item)">
+                                                <span ng-bind="TEXT_TICKETLEVEL[item.ticketLevel]"></span>
+                                            </td>
+                                            <td class="td4" ng-click="viewWorkOrderDetail(item)">
+                                                <span class="table-status-tag" ng-bind="TEXT_TICKETSTATUS[item.ticketStatus]" ng-class="{'tag-danger': item.ticketStatus == 0,
+                                                                 'tag-working': item.ticketStatus == 1,
+                                                                 'tag-wait': item.ticketStatus == 2,
+                                                                 'tag-success': item.ticketStatus == 3,
+                                                                 'tag-delete': item.ticketStatus == 98,
+                                                                 'tag-close': item.ticketStatus == 99}"></span>
+                                            </td>
+                                            <td class="td5" title="{{item.ticketTypeName}}" ng-click="viewWorkOrderDetail(item)" ng-bind="item.ticketTypeName || '--'"></td>
+                                            <td class="td5" title="{{item.dealTimer}}" ng-click="viewWorkOrderDetail(item)" ng-bind="item.dealTimer || '--'"></td>
+                                            <td class="td6" title="{{item.startName + '(' + TEXT_STARTTYPE[item.startType] + ')'}}" ng-click="viewWorkOrderDetail(item)"
+                                                ng-bind="item.startName + '(' + TEXT_STARTTYPE[item.startType] + ')'">创建人</td>
+                                            <td class="td7" title="{{item.dealGroupName}}" ng-click="viewWorkOrderDetail(item)" ng-bind="item.dealGroupName.length>7?(item.dealGroupName | limitTo : 7)+'...':(item.dealGroupName || '--');">受理客服组</td>
+                                            <td class="td8" title="{{item.dealUserName}}" ng-click="viewWorkOrderDetail(item)" ng-bind="item.dealUserName.length>7?(item.dealUserName | limitTo : 7)+'...':(item.dealUserName || '--');">受理客服</td>
+                                            <td class="td9" ng-click="viewWorkOrderDetail(item)" ng-bind="item.createTime? (item.createTime*1000 | date:'yyyy-MM-dd HH:mm:ss'):'--'">创建时间</td>
+                                            <td class="td10" ng-click="viewWorkOrderDetail(item)" ng-bind="item.updateTime? (item.updateTime*1000 | date:'yyyy-MM-dd HH:mm:ss'):'--'">更新时间</td>
+                                            <td class="td-fiexd">
+                                                <span ng-if="item.dealUserId || item.ticketStatus == 98 || item.ticketStatus == 99 || item.ticketStatus == 3">--</span>
+                                                <a ng-if="!item.dealUserId && item.ticketStatus != 98 && item.ticketStatus != 99 && item.ticketStatus != 3" href="javascript:;" ng-click="getOrders(item)">接单</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="zc-j-fixed-main-body-no" ng-if="workList && workList.length == 0;">
+                                    没有工单信息
+                                </div>
+                            </div>
+                        </div>
+                        <div class="zc-j-fixed-right zc-j-fixed-right-shadow" ng-show="workList.length != 0">
+                            <div class="zc-j-fixed-right-header zc-j-scrollbar">
+                                <table class="zc-j-fixed-right-table zc-j-table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>操作</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                            <div class="zc-j-fixed-right-body">
+                                <div class="zc-j-fixed-right-body-inner zc-j-fixed-inner zc-j-scrollbar">
+                                    <table class="zc-j-fixed-right-table zc-j-table-hover">
+                                        <tbody>
+                                            <tr ng-repeat="item in workList" ng-class="{'active': hoverId == item.ticketId}" ng-mouseenter="addHoverStyle(item)" ng-mouseleave="removeHoverStyle(item)">
+                                                <td class="td-fiexd">
+                                                    <span ng-if="item.dealUserId || item.ticketStatus == 98 || item.ticketStatus == 99 || item.ticketStatus == 3">--</span>
+                                                    <a ng-if="!item.dealUserId && item.ticketStatus != 98 && item.ticketStatus != 99 && item.ticketStatus != 3" href="javascript:;" ng-click="getOrders(item)">接单</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+		</div>
+		<div class="code-box-meta">
+			default table
 		</div>
 	</div>	
 </div>
