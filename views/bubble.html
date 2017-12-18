@@ -1,0 +1,73 @@
+<div class="jui-layout">
+	<h1 class="jui-layout-title">Bubble</h1>
+	<p class="jui-layout-remark">directive</p>
+	<div></div>
+	<h2 class="jui-layout-title-second">Examples</h2>
+	<p class="jui-layout-remark">xxxx</p>
+	
+	<div class="jui-code-box">
+		<div class="code-box-demo clearFloat">
+			<div class="fl" style="width:200px">
+                <p class="zc-j-font-btn">自定义位置</p>
+                <div style="margin:30px 0;">
+                    <span class="jui-bubble">
+                        自定义内容宽度{{zStyle}}
+                        <div jui-dir-bubble jui-content="longContent" jui-style="zStyle"></div>
+                    </span>
+                </div>
+                <div style="margin:30px 0;">
+                    <span class="jui-bubble">
+                        自定义位置{{zPosition}}
+                        <div jui-dir-bubble jui-content="longContent" jui-style="zPosition"></div>
+                    </span>
+                </div>
+            </div>
+            <div class="fl" style="width:200px">
+                <p class="zc-j-font-btn">默认方向 right/down</p>
+                <div style="margin:30px 0;">
+                    <span class="jui-bubble">
+                        提示文案
+                        <div jui-dir-bubble jui-content="shortContent"></div>
+                    </span>
+                </div>
+                <div style="margin:30px 0;">
+                    <span class="jui-bubble">
+                        提示文案up
+                        <div jui-dir-bubble jui-content="longContent" jui-position="up"></div>
+                    </span>
+                </div>
+                <div style="margin:30px 0;">
+                    <span class="jui-bubble">
+                        提示文案left
+                        <div jui-dir-bubble jui-content="longContent" jui-position="left"></div>
+                    </span>
+                </div>
+                <div style="margin:30px 0;">
+                    <span class="jui-bubble">
+                        提示文案up_left
+                        <div jui-dir-bubble jui-content="longContent" jui-position="up_left"></div>
+                    </span>
+                </div>
+            </div>
+            <div class="fl" style="width:200px">
+                <p class="zc-j-font-btn">文字长度限制</p>
+                <div style="margin:30px 0;">
+                    <span class="jui-bubble">
+                        九个文字: jui-limit="10"
+                        <div jui-dir-bubble jui-content="shortContent" jui-limit="10"></div>
+                    </span>
+                </div>
+                <div style="margin:30px 0;">
+                    <span class="jui-bubble">
+                        十三个文字: jui-limit="10"
+                        <div jui-dir-bubble jui-content="moreContent" jui-limit="10"></div>
+                    </span>
+                </div>
+            </div>
+		</div>
+		<div class="code-box-meta">
+            <h4 style="margin:0;">jui-dir-bubble(directive)</h4>
+			<p>directive name: <strong>jui-dir-bubble</strong></p>
+		</div>
+	</div>
+</div>

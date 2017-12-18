@@ -26,7 +26,7 @@ angular.module('jui').config(function($locationProvider, $stateProvider, $urlRou
 		'url': '/Bubble',
 		'views': {
 			'body': {
-				'templateUrl': 'views/b.html',
+				'templateUrl': 'views/bubble.html',
 				'controller': 'BubbleCtrl'
 			}
 		}

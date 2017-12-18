@@ -16,6 +16,21 @@ table {
 	border-spacing: 0;
 	empty-cells: hide;
 }
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+.clearFloat {
+	&::after {
+		content: '';
+		height: 0;
+		visibility: hidden;
+		display: block;
+		clear: both;
+	}
+}
 // 滚动条
 .zc-j-scrollbar {
     &::-webkit-scrollbar {

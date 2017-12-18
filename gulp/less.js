@@ -25,3 +25,14 @@ gulp.task('less-table', function(){
 			}))
 			.pipe(gulp.dest('./styles'));
 });
+gulp.task('less-bubble', function(){
+	return gulp.src('./styles/bubble.less')
+			.pipe(less())
+			.on("error", notify.onError({
+				'message': 'Error:<%= error.message %>'
+			}))
+			.pipe(autoPre({
+				'browsers': ['last 5 versions']
+			}))
+			.pipe(gulp.dest('./styles'));
+});

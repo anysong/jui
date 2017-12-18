@@ -1,0 +1,94 @@
+.jui-bubble {
+  position: relative;
+  display: inline-block;
+}
+.jui-bubble:hover .tips_detail {
+  display: block;
+  opacity: 1;
+}
+.jui-bubble .tips_detail {
+  white-space: normal;
+  position: absolute;
+  width: 390px;
+  opacity: 0;
+  display: none;
+  -webkit-transition: opacity 0.2s linear;
+  -o-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+  text-align: left;
+  top: 100%;
+  margin-top: 6px;
+  left: -17px;
+  background-color: white;
+  z-index: 14;
+  border: 1px solid #e6eded;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0 0px 12px 0px rgba(61, 73, 102, 0.15);
+          box-shadow: 0 0px 12px 0px rgba(61, 73, 102, 0.15);
+  color: #8B98AD;
+}
+.jui-bubble .tips_detail .tips_detail_wrap {
+  padding: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+  word-break: break-all;
+  white-space: normal;
+}
+.jui-bubble .tips_detail .tips_detail_wrap .tips_detail_title {
+  line-height: 20px;
+  margin-bottom: 10px;
+  word-break: break-all;
+}
+.jui-bubble .tips_detail .tips_detail_wrap .tips_detail_content {
+  line-height: 20px;
+  margin-bottom: 10px;
+  color: #3D4966;
+}
+.jui-bubble .tips_detail .tri {
+  width: 0px;
+  display: block;
+  position: absolute;
+  z-index: 5;
+  top: -16px;
+  left: 17px;
+  height: 0px;
+  border: 8px solid transparent;
+  border-bottom: 8px solid rgba(61, 73, 102, 0.12);
+}
+.jui-bubble .tips_detail .tri::before {
+  content: '';
+  width: 0px;
+  display: block;
+  position: absolute;
+  z-index: 6;
+  top: -7px;
+  left: -8px;
+  height: 0px;
+  border: 8px solid transparent;
+  border-bottom: 8px solid #ffffff;
+}
+.jui-bubble .tips_detail.up_direction {
+  top: inherit;
+  bottom: 100%;
+  margin-bottom: 6px;
+}
+.jui-bubble .tips_detail.up_direction .tri {
+  bottom: -16px;
+  top: inherit;
+  border: 8px solid transparent;
+  border-top: 8px solid rgba(61, 73, 102, 0.12);
+}
+.jui-bubble .tips_detail.up_direction .tri::before {
+  top: -9px;
+  border: 8px solid transparent;
+  border-top: 8px solid #ffffff;
+}
+.jui-bubble .tips_detail.left_direction {
+  left: inherit;
+  right: -17px;
+}
+.jui-bubble .tips_detail.left_direction .tri {
+  left: auto;
+  right: 17px;
+}

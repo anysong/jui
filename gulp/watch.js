@@ -8,4 +8,7 @@ gulp.task('watch', function(){
 	watch("./styles/table.less", function(){
 		gulp.start('less-table');
 	})
+	watch("./styles/bubble.less", function(){
+		gulp.start('less-bubble');
+	})
 })
