@@ -8,10 +8,17 @@
 	<div class="jui-code-box">
 		<div class="code-box-demo">
 			<table class="jui-table">
+                <colgroup>
+                    <col style="width: 100px;min-width: 100px">
+                    <col style="width: 100px;min-width: 100px">
+                    <col style="width: 100px;min-width: 100px">
+                    <col style="width: 100px;min-width: 100px">
+                </colgroup>
 				<thead>
 					<tr>
 						<th>title1</th>
 						<th>title2</th>
+                        <th>title3</th>
 						<th>title3</th>
 					</tr>
 				</thead>
@@ -19,12 +26,14 @@
 					<tr>
 						<td>td1</td>
 						<td>td2</td>
+                        <td>td3</td>
 						<td>td3</td>
 					</tr>
 					<tr>
 						<td>td1</td>
 						<td>td2</td>
-						<td>td3</td>
+                        <td>td3</td>
+						<td>td3</
 					</tr>
 				</tbody>
 			</table>
@@ -63,73 +72,98 @@
 	</div>
 	<div class="jui-code-box">
 		<div class="code-box-demo">
-			<div class="zc-j-fixed">
-                <div class="zc-j-fixed-scroll">
-                    <div class="zc-j-fixed-main">
-                        <div class="zc-j-fixed-main-header zc-j-scrollbar" ng-class="{'no-data': (workList.length == 0)}">
-                            <table class="zc-j-fixed-main-table zc-j-table-hover">
+			<div class="jui-table-fixed">
+                <div class="jui-table-fixed-scroll">
+                    <div class="jui-table-fixed-main">
+                        <div class="jui-table-fixed-main-header zc-j-scrollbar" ng-class="{'no-data': (workList.length == 0)}">
+                            <table class="jui-table-fixed-main-table jui-table">
+                                 <colgroup>
+                                    <col style="width: 150px;min-width: 150px">
+                                    <col style="width: 150px;min-width: 150px">
+                                    <col style="width: 150px;min-width: 150px">
+                                    <col style="width: 150px;min-width: 150px">
+                                    <col style="width: 150px;min-width: 150px">
+                                    <col style="width: 150px;min-width: 150px">
+                                    <col style="width: 150px;min-width: 150px">
+                                    <col>
+                                    <col style="width: 100px;min-width: 100px">
+                                </colgroup>
                                 <thead>
                                     <tr>
-                                        <th class="td5">分类</th>
-                                        <th class="td5">处理时效</th>
-                                        <th class="td6">创建人</th>
-                                        <th class="td7">受理客服组</th>
-                                        <th class="td8">受理客服</th>
-                                        <th class="td-fiexd">操作</th>
+                                        <th>title</th>
+                                        <th>title</th>
+                                        <th>title</th>
+                                        <th>title</th>
+                                        <th>title</th>
+                                        <th>title</th>
+                                        <th>title</th>
+                                        <th>title</th>
+                                        <th>ac</th>
                                     </tr>
                                 </thead>
                             </table>
                         </div>
-                        <div class="zc-j-fixed-main-body zc-j-fixed-inner zc-j-scrollbar" ng-class="{'noData': (workList.length == 0)}">
-                            <table class="zc-j-fixed-main-table zc-j-table-hover">
-                                <thead class="zc-j-fixed-main-table-thead-no" ng-class="{'zc-j-fixed-main-table-thead': (workList.length == 0)}">
+                        <div class="jui-table-fixed-main-body js-inner zc-j-scrollbar" ng-class="{'noData': (workList.length == 0)}">
+                            <table class="jui-table-fixed-main-table jui-table">
+                                <colgroup>
+                                    <col style="width: 150px;min-width: 150px">
+                                    <col style="width: 150px;min-width: 150px">
+                                    <col style="width: 150px;min-width: 150px">
+                                    <col style="width: 150px;min-width: 150px">
+                                    <col style="width: 150px;min-width: 150px">
+                                    <col style="width: 150px;min-width: 150px">
+                                    <col style="width: 150px;min-width: 150px">
+                                    <col>
+                                    <col style="width: 100px;min-width: 100px">
+                                </colgroup>
+                                <thead class="jui-table-fixed-main-table-thead-no" ng-class="{'jui-table-fixed-main-table-thead': (workList.length == 0)}">
                                     <tr>
-                                        <th class="td5">分类</th>
-                                        <th class="td5">处理时效</th>
-                                        <th class="td6">创建人</th>
-                                        <th class="td7">受理客服组</th>
-                                        <th class="td8">受理客服</th>
-                                        <th class="td-fiexd">操作</th>
+                                        <th>title</th>
+                                        <th>title</th>
+                                        <th>title</th>
+                                        <th>title</th>
+                                        <th>title</th>
+                                        <th>title</th>
+                                        <th>title</th>
+                                        <th>title</th>
+                                        <th>ac</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr ng-repeat="item in workList" ng-class="{'active': hoverId == item.ticketId}" ng-mouseenter="addHoverStyle(item)" ng-mouseleave="removeHoverStyle(item)">
-                                        <td class="td5">5</td>
-                                        <td class="td5">5</td>
-                                        <td class="td6">6</td>
-                                        <td class="td7">7</td>
-                                        <td class="td8">8</td>
-                                        <td class="td-fiexd">
-                                            <span ng-if="false">--</span>
-                                            <a ng-if="true" href="javascript:;" ng-click="getOrders(item)">接单</a>
-                                        </td>
+                                    <tr ng-repeat="item in workList" ng-class="{'active': hoverIndex == $index +1}" ng-mouseenter="addHoverStyle(item, $index)" ng-mouseleave="removeHoverStyle(item, $index)">
+                                        <td>cont</td>
+                                        <td>cont</td>
+                                        <td>cont</td>
+                                        <td>cont</td>
+                                        <td>cont</td>
+                                        <td>cont</td>
+                                        <td>cont</td>
+                                        <td>cont</td>
+                                        <td>contAc</td>
                                     </tr>
                                 </tbody>
                             </table>
-                            <div class="zc-j-fixed-main-body-no" ng-if="workList && workList.length == 0;">
-                                没有工单信息
+                            <div class="jui-table-fixed-main-body-no" ng-if="workList && workList.length == 0;">
+                                no Data
                             </div>
                         </div>
                     </div>
-                    <div class="zc-j-fixed-right zc-j-fixed-right-shadow" ng-show="workList.length != 0">
-                        <div class="zc-j-fixed-right-header zc-j-scrollbar">
-                            <table class="zc-j-fixed-right-table zc-j-table-hover">
+                    <div class="jui-table-fixed-right" ng-show="workList.length != 0">
+                        <div class="jui-table-fixed-right-header zc-j-scrollbar">
+                            <table class="jui-table-fixed-right-table zc-j-table-hover">
                                 <thead>
                                     <tr>
-                                        <th>操作</th>
+                                        <th>action</th>
                                     </tr>
                                 </thead>
                             </table>
                         </div>
-                        <div class="zc-j-fixed-right-body">
-                            <div class="zc-j-fixed-right-body-inner zc-j-fixed-inner zc-j-scrollbar">
-                                <table class="zc-j-fixed-right-table zc-j-table-hover">
+                        <div class="jui-table-fixed-right-body">
+                            <div class="jui-table-fixed-right-body-inner js-inner zc-j-scrollbar">
+                                <table class="jui-table">
                                     <tbody>
-                                        <tr ng-repeat="item in workList" ng-class="{'active': hoverId == item.ticketId}" ng-mouseenter="addHoverStyle(item)" ng-mouseleave="removeHoverStyle(item)">
-                                            <td class="td-fiexd">
-                                                <span ng-if="false">--</span>
-                                                <a ng-if="true" href="javascript:;" ng-click="getOrders(item)">接单</a>
-                                            </td>
+                                        <tr ng-repeat="item in workList" ng-mouseenter="addHoverStyle(item, $index)" ng-mouseleave="removeHoverStyle(item, $index)" ng-class="{'active': hoverIndex == $index +1}">
+                                            <td>action</td>
                                         </tr>
                                     </tbody>
                                 </table>

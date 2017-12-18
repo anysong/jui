@@ -71,93 +71,92 @@
 .jui-table tbody tr td:first-child {
   padding-left: 20px;
 }
-.zc-j-fixed {
+.jui-table-fixed {
   position: relative;
   width: 100%;
 }
-.zc-j-fixed .zc-j-fixed-scroll .zc-j-fixed-main .zc-j-fixed-main-header {
+.jui-table-fixed .jui-table-fixed-scroll .jui-table-fixed-main .jui-table-fixed-main-header {
   overflow: scroll;
-  background-color: #f7f7f7;
   margin-bottom: -12px;
   padding: 0;
 }
-.zc-j-fixed .zc-j-fixed-scroll .zc-j-fixed-main .zc-j-fixed-main-header.no-data {
+.jui-table-fixed .jui-table-fixed-scroll .jui-table-fixed-main .jui-table-fixed-main-header.no-data {
   overflow: hidden;
 }
-.zc-j-fixed .zc-j-fixed-scroll .zc-j-fixed-main .zc-j-fixed-main-body {
+.jui-table-fixed .jui-table-fixed-scroll .jui-table-fixed-main .jui-table-fixed-main-body {
   overflow-x: auto;
   overflow-y: scroll;
 }
-.zc-j-fixed .zc-j-fixed-scroll .zc-j-fixed-main .zc-j-fixed-main-body .zc-j-fixed-main-body-no {
+.jui-table-fixed .jui-table-fixed-scroll .jui-table-fixed-main .jui-table-fixed-main-body .jui-table-fixed-main-body-no {
   text-align: center;
   margin-top: 40px;
   color: #a6aec2;
 }
-.zc-j-fixed .zc-j-fixed-scroll .zc-j-fixed-main .zc-j-fixed-main-body.noData {
+.jui-table-fixed .jui-table-fixed-scroll .jui-table-fixed-main .jui-table-fixed-main-body.noData {
   overflow-y: hidden;
 }
-.zc-j-fixed .zc-j-fixed-scroll .zc-j-fixed-main .zc-j-fixed-main-table .zc-j-fixed-main-table-thead-no {
+.jui-table-fixed .jui-table-fixed-scroll .jui-table-fixed-main .jui-table-fixed-main-table {
+  width: 1000px;
+  min-width: 100%;
+}
+.jui-table-fixed .jui-table-fixed-scroll .jui-table-fixed-main .jui-table-fixed-main-table .jui-table-fixed-main-table-thead-no {
   display: none;
 }
-.zc-j-fixed .zc-j-fixed-scroll .zc-j-fixed-main .zc-j-fixed-main-table .zc-j-fixed-main-table-thead {
+.jui-table-fixed .jui-table-fixed-scroll .jui-table-fixed-main .jui-table-fixed-main-table .jui-table-fixed-main-table-thead {
   height: 0;
   line-height: 0;
   visibility: hidden;
   display: block;
 }
-.zc-j-fixed .zc-j-fixed-scroll .zc-j-fixed-main .zc-j-fixed-main-table .zc-j-fixed-main-table-thead tr {
+.jui-table-fixed .jui-table-fixed-scroll .jui-table-fixed-main .jui-table-fixed-main-table .jui-table-fixed-main-table-thead tr {
   height: 0;
   line-height: 0;
 }
-.zc-j-fixed .zc-j-fixed-scroll .zc-j-fixed-main .zc-j-fixed-main-table .zc-j-fixed-main-table-thead tr th {
+.jui-table-fixed .jui-table-fixed-scroll .jui-table-fixed-main .jui-table-fixed-main-table .jui-table-fixed-main-table-thead tr th {
   height: 0;
   line-height: 0;
 }
-.zc-j-fixed .zc-j-fixed-scroll .zc-j-fixed-right {
-  width: 80px;
+.jui-table-fixed .jui-table-fixed-scroll .jui-table-fixed-right {
+  width: 100px;
   position: absolute;
   right: 0;
   top: 0;
   overflow: hidden;
   background-color: #ffffff;
 }
-.zc-j-fixed .zc-j-fixed-scroll .zc-j-fixed-right .zc-j-fixed-right-header {
+.jui-table-fixed .jui-table-fixed-scroll .jui-table-fixed-right .jui-table-fixed-right-header {
   overflow: scroll;
-  background-color: #f7f7f7;
   margin-bottom: -12px;
   padding: 0;
 }
-.zc-j-fixed .zc-j-fixed-scroll .zc-j-fixed-right .zc-j-fixed-right-body {
+.jui-table-fixed .jui-table-fixed-scroll .jui-table-fixed-right .jui-table-fixed-right-body {
   margin-bottom: -12px;
 }
-.zc-j-fixed .zc-j-fixed-scroll .zc-j-fixed-right .zc-j-fixed-right-body .zc-j-fixed-right-body-inner {
+.jui-table-fixed .jui-table-fixed-scroll .jui-table-fixed-right .jui-table-fixed-right-body .jui-table-fixed-right-body-inner {
   overflow: scroll;
 }
-.zc-j-fixed .zc-j-fixed-scroll .zc-j-fixed-right .zc-j-fixed-right-table {
+.jui-table-fixed .jui-table-fixed-scroll .jui-table-fixed-right .jui-table-fixed-right-table {
   width: 100%;
 }
-.zc-j-fixed .zc-j-fixed-scroll .zc-j-fixed-right.zc-j-fixed-right-shadow {
+.jui-table-fixed .jui-table-fixed-scroll .jui-table-fixed-right.jui-table-fixed-right-shadow {
   -webkit-box-shadow: -6px 0 6px -4px rgba(61, 73, 102, 0.2);
           box-shadow: -6px 0 6px -4px rgba(61, 73, 102, 0.2);
 }
-.zc-j-fixed .zc-j-fixed-scroll .zc-j-fixed-inner {
+.jui-table-fixed .jui-table-fixed-scroll .js-inner {
   overflow: scroll;
   min-height: 300px;
   max-height: 500px;
 }
-.zc-j-fixed .zc-j-fixed-scroll table {
+.jui-table-fixed .jui-table-fixed-scroll table {
   table-layout: fixed;
 }
-.zc-j-fixed .zc-j-fixed-scroll table thead {
+.jui-table-fixed .jui-table-fixed-scroll table thead {
   background-color: #F4F6FA;
 }
-.zc-j-fixed .zc-j-fixed-scroll table tr {
+.jui-table-fixed .jui-table-fixed-scroll table tr {
   line-height: 50px;
 }
-.zc-j-fixed .zc-j-fixed-scroll table tr th {
-  width: 150px;
-  min-width: 150px;
-  max-width: 150px;
+.jui-table-fixed .jui-table-fixed-scroll table tr th {
   height: 50px;
   line-height: 50px;
   padding-left: 20px;
@@ -168,11 +167,7 @@
   color: #3D4966;
   text-align: left;
 }
-.zc-j-fixed .zc-j-fixed-scroll table tr td {
-  border-bottom: 1px solid #e9e9e9;
-  width: 150px;
-  min-width: 150px;
-  max-width: 150px;
+.jui-table-fixed .jui-table-fixed-scroll table tr td {
   height: 50px;
   line-height: 50px;
   padding-left: 20px;
@@ -183,37 +178,9 @@
   color: #3D4966;
   text-align: left;
 }
-.zc-j-fixed .zc-j-fixed-scroll table tr td.active {
+.jui-table-fixed .jui-table-fixed-scroll table tr td.active {
   background-color: #F5F8FD;
 }
-.zc-j-fixed .zc-j-fixed-scroll table .td-fiexd {
-  width: 80px;
-  min-width: 80px;
-  max-width: 80px;
-}
-.zc-j-fixed .zc-j-fixed-scroll table .td2 {
-  overflow: initial;
-  width: 200px;
-  min-width: 200px;
-}
-.zc-j-fixed .zc-j-fixed-scroll table .td0 {
-  width: 60px;
-  min-width: 60px;
-}
-.zc-j-fixed .zc-j-fixed-scroll table .td1 {
-  width: 100px;
-  min-width: 100px;
-}
-.zc-j-fixed .zc-j-fixed-scroll table .td3 {
-  width: 100px;
-  min-width: 100px;
-}
-.zc-j-fixed .zc-j-fixed-scroll table .td4 {
-  width: 100px;
-  min-width: 100px;
-}
-.zc-j-fixed .zc-j-fixed-scroll table .td9,
-.zc-j-fixed .zc-j-fixed-scroll table .td10 {
-  width: 166px;
-  min-width: 166px;
+.jui-table-fixed .jui-table-fixed-scroll table tr.active {
+  background-color: #F5F8FD;
 }
