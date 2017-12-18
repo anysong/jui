@@ -45,9 +45,7 @@ angular.module('jui').controller('TableCtrl', ['$scope', function($scope){
         };
     };
     var addHoverStyle = function(item, index){
-        // $scope.hoverId = item.id;
         $scope.hoverIndex = index + 1;
-        console.log(index)
     };
     var removeHoverStyle = function(item, index){
         $scope.hoverIndex = null;
@@ -58,11 +56,10 @@ angular.module('jui').controller('TableCtrl', ['$scope', function($scope){
     };
     //ui-table-fixed-right
     var initShadow = function(){
-        var scrollLeft = $('.jui-table-fixed-main-body').scrollLeft;
-        var clientWidth = $('.jui-table-fixed-main-body').clientWidth;
-       
-        return;
-        if ((ev.target.scrollLeft + ev.target.clientWidth + 1) >= ev.target.scrollWidth) {
+        
+        var width = $('.jui-table-fixed-main-body').width();
+
+        if (width > 1000) {
             $('.jui-table-fixed-right').removeClass('jui-table-fixed-right-shadow');
         } else {
             $('.jui-table-fixed-right').addClass('jui-table-fixed-right-shadow');
