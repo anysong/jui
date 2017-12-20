@@ -1,4 +1,5 @@
 # jui
 #### some new
 
-![图片加载失败了](http://img.shields.io/travis/{GitHub 用户名}/{项目名称}.svg)
+![b](https://img.shields.io/issuestats/p/github/expressjs/express.svg)
+<a src="	https://img.shields.io/issuestats/p/github/expressjs/express.svg"></a>
