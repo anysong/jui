@@ -139,8 +139,7 @@
   width: 100%;
 }
 .jui-table-fixed .jui-table-fixed-scroll .jui-table-fixed-right.jui-table-fixed-right-shadow {
-  -webkit-box-shadow: -6px 0 6px -4px rgba(61, 73, 102, 0.2);
-          box-shadow: -6px 0 6px -4px rgba(61, 73, 102, 0.2);
+  box-shadow: -6px 0 6px -4px rgba(61, 73, 102, 0.2);
 }
 .jui-table-fixed .jui-table-fixed-scroll .js-inner {
   overflow: scroll;
@@ -161,8 +160,7 @@
   line-height: 50px;
   padding-left: 20px;
   overflow: hidden;
-  -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
+  text-overflow: ellipsis;
   white-space: nowrap;
   color: #3D4966;
   text-align: left;
@@ -172,8 +170,7 @@
   line-height: 50px;
   padding-left: 20px;
   overflow: hidden;
-  -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
+  text-overflow: ellipsis;
   white-space: nowrap;
   color: #3D4966;
   text-align: left;

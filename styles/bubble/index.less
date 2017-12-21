@@ -1,0 +1,93 @@
+.jui-bubble {
+    position: relative;
+    display: inline-block;
+    &:hover {
+        .tips_detail {
+            display: block;
+            opacity: 1;
+        }
+    }
+    .tips_detail {
+        white-space: normal;
+        position: absolute;
+        width: 390px;
+        // max-height: 200px;
+        opacity: 0;
+        display: none;
+        transition:opacity 0.2s linear;
+        text-align: left;
+        top: 100%;
+        margin-top: 6px;
+        left: -17px;
+        background-color:white;
+        z-index: 14;
+        border: 1px solid #e6eded;
+        box-sizing: border-box;
+        box-shadow: 0 0px 12px 0px rgba(61,73,102,.15);
+        color: #8B98AD;
+        .tips_detail_wrap {
+            padding: 10px;
+            max-height: 200px;
+            overflow-y: auto;
+            word-break: break-all;
+            white-space: normal;
+            .tips_detail_title {
+                line-height: 20px;
+                margin-bottom: 10px;
+                word-break: break-all;
+            }
+            .tips_detail_content {
+                line-height: 20px;
+                margin-bottom: 10px;
+                color: #3D4966;
+            }
+        }
+        .tri {
+            width: 0px;
+            display: block;
+            position: absolute;
+            z-index: 5;
+            top: -16px;
+            left: 17px;
+            height: 0px;
+            border: 8px solid transparent;
+            border-bottom: 8px solid rgba(61,73,102,.12);
+            &::before {
+                content: '';
+                width: 0px;
+                display: block;
+                position: absolute;
+                z-index: 6;
+                top: -7px;
+                left: -8px;
+                height: 0px;
+                border: 8px solid transparent;
+                border-bottom: 8px solid #ffffff;
+            }
+        }
+        &.up_direction {
+            top: inherit;
+            bottom: 100%;
+            margin-bottom: 6px;
+            .tri {
+                bottom: -16px;
+                top: inherit;
+                border: 8px solid transparent;
+                border-top: 8px solid rgba(61,73,102,.12);
+                &::before {
+                    top: -9px;
+                    border: 8px solid transparent;
+                    border-top: 8px solid #ffffff;
+                }
+            }
+        }
+        &.left_direction {
+            left: inherit;
+            right: -17px;
+            .tri {
+                left: auto;
+                right: 17px;
+            }
+        }
+    }
+}
