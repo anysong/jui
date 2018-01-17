@@ -8,12 +8,15 @@
 	<div class="jui-code-box">
 		<div class="code-box-demo jui-iframe">
             <ul class="jui-iframe-list clearFloat">
-                <li class="jui-iframe-list-li" ng-repeat="item in iframeList">
-                    <span ng-bind="item" class=""></span>
+                <li class="jui-iframe-list-li" 
+                	ng-class="{'active': activeIrame.name == item.name}"
+                	ng-click="toggle(item)" 
+                	ng-repeat="item in iframeList">
+                    <span ng-bind="item.name" class=""></span>
                 </li>
             </ul>         
-            <div>
-                
+            <div class="jui-iframe-window">
+                <iframe ng-src="{{activeIrame.src}}" frameborder="0"></iframe>
             </div>
 		</div>
 		<div class="code-box-meta">

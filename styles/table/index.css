@@ -1,0 +1,183 @@
+.jui-table {
+  width: 100%;
+}
+.jui-table thead {
+  width: 100%;
+  background-color: #F4f6FA;
+}
+.jui-table thead tr {
+  line-height: 50px;
+}
+.jui-table thead tr th {
+  font-size: 14px;
+  font-weight: bold;
+  padding-left: 10px;
+  color: #3D4966;
+  text-align: left;
+}
+.jui-table thead tr th:last-child {
+  padding-right: 20px;
+}
+.jui-table thead tr th:first-child {
+  padding-left: 20px;
+}
+.jui-table thead tr th.sort::after {
+  content: '';
+  margin-left: 2px;
+  width: 7px;
+  height: 9px;
+  display: inline-block;
+  background: url("../images/sprite.png");
+  background-position: -360px -280px;
+}
+.jui-table thead tr th.sort.desc::after {
+  cursor: pointer;
+  content: '';
+  margin-left: 2px;
+  width: 7px;
+  height: 9px;
+  display: inline-block;
+  background: url("../images/sprite.png");
+  background-position: -400px -280px;
+}
+.jui-table thead tr th.sort.asc::after {
+  cursor: pointer;
+  content: '';
+  margin-left: 2px;
+  width: 7px;
+  height: 9px;
+  display: inline-block;
+  background: url("../images/sprite.png");
+  background-position: -380px -280px;
+}
+.jui-table tbody {
+  width: 100%;
+}
+.jui-table tbody tr {
+  line-height: 50px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #EBEBEB;
+}
+.jui-table tbody tr td {
+  font-size: 14px;
+  font-weight: normal;
+  padding-left: 10px;
+  color: #3D4966;
+  text-align: left;
+}
+.jui-table tbody tr td:last-child {
+  padding-right: 10px;
+}
+.jui-table tbody tr td:first-child {
+  padding-left: 20px;
+}
+.jui-table-fixed {
+  position: relative;
+  width: 100%;
+}
+.jui-table-fixed .jui-table-fixed-scroll .jui-table-fixed-main .jui-table-fixed-main-header {
+  overflow: scroll;
+  margin-bottom: -12px;
+  padding: 0;
+}
+.jui-table-fixed .jui-table-fixed-scroll .jui-table-fixed-main .jui-table-fixed-main-header.no-data {
+  overflow: hidden;
+}
+.jui-table-fixed .jui-table-fixed-scroll .jui-table-fixed-main .jui-table-fixed-main-body {
+  overflow-x: auto;
+  overflow-y: scroll;
+}
+.jui-table-fixed .jui-table-fixed-scroll .jui-table-fixed-main .jui-table-fixed-main-body .jui-table-fixed-main-body-no {
+  text-align: center;
+  margin-top: 40px;
+  color: #a6aec2;
+}
+.jui-table-fixed .jui-table-fixed-scroll .jui-table-fixed-main .jui-table-fixed-main-body.noData {
+  overflow-y: hidden;
+}
+.jui-table-fixed .jui-table-fixed-scroll .jui-table-fixed-main .jui-table-fixed-main-table {
+  width: 1000px;
+  min-width: 100%;
+}
+.jui-table-fixed .jui-table-fixed-scroll .jui-table-fixed-main .jui-table-fixed-main-table .jui-table-fixed-main-table-thead-no {
+  display: none;
+}
+.jui-table-fixed .jui-table-fixed-scroll .jui-table-fixed-main .jui-table-fixed-main-table .jui-table-fixed-main-table-thead {
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
+  display: block;
+}
+.jui-table-fixed .jui-table-fixed-scroll .jui-table-fixed-main .jui-table-fixed-main-table .jui-table-fixed-main-table-thead tr {
+  height: 0;
+  line-height: 0;
+}
+.jui-table-fixed .jui-table-fixed-scroll .jui-table-fixed-main .jui-table-fixed-main-table .jui-table-fixed-main-table-thead tr th {
+  height: 0;
+  line-height: 0;
+}
+.jui-table-fixed .jui-table-fixed-scroll .jui-table-fixed-right {
+  width: 100px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+.jui-table-fixed .jui-table-fixed-scroll .jui-table-fixed-right .jui-table-fixed-right-header {
+  overflow: scroll;
+  margin-bottom: -12px;
+  padding: 0;
+}
+.jui-table-fixed .jui-table-fixed-scroll .jui-table-fixed-right .jui-table-fixed-right-body {
+  margin-bottom: -12px;
+}
+.jui-table-fixed .jui-table-fixed-scroll .jui-table-fixed-right .jui-table-fixed-right-body .jui-table-fixed-right-body-inner {
+  overflow: scroll;
+}
+.jui-table-fixed .jui-table-fixed-scroll .jui-table-fixed-right .jui-table-fixed-right-table {
+  width: 100%;
+}
+.jui-table-fixed .jui-table-fixed-scroll .jui-table-fixed-right.jui-table-fixed-right-shadow {
+  box-shadow: -6px 0 6px -4px rgba(61, 73, 102, 0.2);
+}
+.jui-table-fixed .jui-table-fixed-scroll .js-inner {
+  overflow: scroll;
+  min-height: 300px;
+  max-height: 500px;
+}
+.jui-table-fixed .jui-table-fixed-scroll table {
+  table-layout: fixed;
+}
+.jui-table-fixed .jui-table-fixed-scroll table thead {
+  background-color: #F4F6FA;
+}
+.jui-table-fixed .jui-table-fixed-scroll table tr {
+  line-height: 50px;
+}
+.jui-table-fixed .jui-table-fixed-scroll table tr th {
+  height: 50px;
+  line-height: 50px;
+  padding-left: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #3D4966;
+  text-align: left;
+}
+.jui-table-fixed .jui-table-fixed-scroll table tr td {
+  height: 50px;
+  line-height: 50px;
+  padding-left: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #3D4966;
+  text-align: left;
+}
+.jui-table-fixed .jui-table-fixed-scroll table tr td.active {
+  background-color: #F5F8FD;
+}
+.jui-table-fixed .jui-table-fixed-scroll table tr.active {
+  background-color: #F5F8FD;
+}

@@ -17,6 +17,7 @@ gulp.task('dir-concat', function(){
 })
 
 gulp.task('less-concat', function(){
+	console.log('@');
 	gulp.src('styles/*.css')
 	.pipe(concat('styles.css'))
 	.on('onError',notify.onError("Error: <%= error.message %>"))
