@@ -12,6 +12,11 @@ function($scope, $state){
 			'href': 'main.bubble',
 			'id': 2
 
+		},{
+			'title': 'Iframe',
+			'href': 'main.iframe',
+			'id': 3
+
 		}];
 		$scope.activeId = $state.current.name;
 	};

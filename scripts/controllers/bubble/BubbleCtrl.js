@@ -8,6 +8,7 @@ angular.module('jui').controller('BubbleCtrl', ['$scope', function($scope){
         $scope.zPosition = '{"left":"0"}';
     }
     var initEvent = function(){
+        
 
     };
     var init = function(){

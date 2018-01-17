@@ -31,6 +31,15 @@ angular.module('jui').config(function($locationProvider, $stateProvider, $urlRou
 			}
 		}
 	})
+	.state('main.iframe', {
+		'url': '/Iframe',
+		'views': {
+			'body': {
+				'templateUrl': 'views/iframe.html',
+				'controller': 'IframeCtrl'
+			}
+		}
+	})
 
 }).run(['$rootScope', '$window', '$location', '$log','$templateCache', function ($rootScope, $window, $location, $log,$templateCache) {
 
